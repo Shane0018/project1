@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  user_id: 1
+  date_ordered: 2021-05-30
+  date_for_pickup: 2021-05-30
+  date_for_dropoff: 2021-05-30
+
+two:
+  id: 1
+  user_id: 1
+  date_ordered: 2021-05-30
+  date_for_pickup: 2021-05-30
+  date_for_dropoff: 2021-05-30

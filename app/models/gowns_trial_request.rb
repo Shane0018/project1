@@ -1,0 +1,3 @@
+class GownsTrialRequest < ApplicationRecord
+    
+end

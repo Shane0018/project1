@@ -1,0 +1,3 @@
+class FavouriteListsGown < ApplicationRecord
+    
+end

@@ -1,0 +1,25 @@
+<%= form_for @gown do |f| %> 
+    <p>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </p>
+    <p>
+        <%= f.label :colour %>
+        <%= f.text_field :colour %>
+    </p>
+    <p>
+        <%= f.label :size %>
+        <%= f.number_field :size %>
+    </p>
+    <p>
+        <%= f.label :availability %>
+        <%= f.date_field :availability %>
+    </p>
+    <p>
+        <%= f.label :url %>
+        <%= f.text_field :url %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
