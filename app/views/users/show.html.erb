@@ -1,0 +1,11 @@
+<h1> User: <%= @user.name %> </h1>
+
+<h5> <%= @user.name %> </h5>
+<h5> <%= @user.email %> </h5>
+<h5> <%= @user.phone_number %> </h5>
+<h5> <%= @user.address %> </h5>
+<h5> <%= @user.password %> </h5>
+
+<%= link_to "Modify User Info", edit_user_path %> |
+<%= link_to "Home", root_url %> |
+<%= link_to "Logout" %>

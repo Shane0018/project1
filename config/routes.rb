@@ -4,13 +4,13 @@ Rails.application.routes.draw do
   root 'gowns#homepage'
 
   resources :gowns 
-  # resource :users
+  resources :users do
       # fav.lists and trialrequests are dependent on user
       # to access it will have to go through user:
           # for example  gowns/:gown_id/favourite_lists
-    # resources :favourite_lists
+    resources :favourite_lists
     # resources :trial_requests
-  # end 
+  end 
 
   # resources :available_times
 end
