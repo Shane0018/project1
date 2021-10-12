@@ -11,10 +11,28 @@ class FavouriteListsController < ApplicationController
         @flist = FavouriteList.find(params[:id])
     end 
 
-    def new 
+    def new        
+        respond_to do |format|
+            format.html
+            format.js
+        end
     end 
     
     def create
+        if !params[:favourite_list][:id].blank?
+            p "................................"
+            @fav = FavouriteList.find(params[:favourite_list][:id])
+            @fav.gowns << Gown.find(params[:favourite_list][:gown_id].to_i)
+        else
+            @fav = FavouriteList.new(name: params[:favourite_list][:name])
+            #@fav.user = current_user
+            @fav.user_id  = params[:user_id]
+            if @fav.save
+                @fav.gowns << Gown.find(params[:favourite_list][:gown_id].to_i)
+            end
+    
+        end
+        redirect_to gowns_url
     end
 
     def edit

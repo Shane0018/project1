@@ -1,0 +1,2 @@
+class TrialRequestsController < ApplicationController
+end

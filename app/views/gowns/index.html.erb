@@ -5,8 +5,12 @@
     <h5> Colour: <%= gown.colour %> </h5>
     <h5> Size: <%= gown.size %> </h5>
     <div> <%= link_to image_tag(gown.url, width:'90px'), gown_path(gown.id) %> </div>
-
+   
+    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+    <i class="bi bi-emoji-heart-eyes-fill"></i> </button>
     
+    <%= render partial: 'popup', locals: {gown: gown} %>
+
     <p><%= link_to "Modify Gown", edit_gown_path(gown.id) %>
     <%= link_to "Delete", gown_path(gown.id), method: :delete, data: {confirm: "Are you sure?"}  %> 
     <%= link_to "Add New Gown", new_gown_path %> </p>

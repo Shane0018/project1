@@ -2,6 +2,9 @@ class GownsController < ApplicationController
 
     def index
         @gowns = Gown.all 
+        @fav = FavouriteList.new
+        #@list = currect_user.favourite_lists
+        @list = User.last.favourite_lists
     end 
 
     def show 

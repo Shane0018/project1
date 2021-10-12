@@ -3,8 +3,10 @@
 <% @users.each do |user| %>
     <p>
         <%= link_to <%= user.name %>, edit_user_path %> 
-        <div> <%= user.email %> </div>
-    </p>
+    </p>    
+        
+    <div> <%= user.email %> </div>
+    
     
     <%= link_to "Add New User", new_user_path %>
 <% end %>
